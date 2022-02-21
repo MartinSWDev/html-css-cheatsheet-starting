@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta> charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    Hyper text markup language
+    Forms structure of webpage
+    Wide range of tags
+    Pieced together to form page hierarchy
+
+
+    Browsers have their own styling
+
+
+    Syntax:
+
+
+    &lt;!— HTML Comment —&gt;
+    &lt;tag-name attribute=“value”&gt;
+        Some content
+    &lt;/tag-name&gt;
+
+
+    &lt;self-closing-tag attribute=“value”&gt;
+
+
+        Page foundations:
+        Most HTML docs have identical structure
+        Each of the following tags appears once within in a single doc
+    &lt;!DOCTYPE html&gt;   Informs browser what type of doc follows
+    &lt;html&gt;&lt;/html&gt; Root element in the HTML doc hierarchy
+    &lt;head&gt;&lt;/head&gt; Container for document metadata, generally not visible in the page
+    &lt;title&gt;&lt;/title&gt; The title that appears in the browser tab and bookmarks
+    &lt;body&gt;&lt;/body&gt; Container for the visible content of an HTML document
+
+
+        E.g
+
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt; Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Hello World
+    &lt;/body&gt;
+    &lt;/html&gt;
+
+
+        Headings
+        Six heading tags - h1 to h6 - ranked relative to importance
+        Pages should have 1 h1 and multiple of the others
+        Levels should not be skipped, make sure h1, h2 , h3 not h1, h3, h5
+    &lt;h1&gt; Main Heading &lt;/h1&gt;
+    &lt;h2&gt; Secondary Heading &lt;/h2&gt;
+
+
+
+
+    &lt;p&gt; Paragraphs &lt;/p&gt;
+
+
+    &lt;ul&gt;
+    &lt;li&gt; List &lt;/li&gt;
+    &lt;li&gt; List 2
+    &lt;ul&gt;
+    &lt;li&gt; List 3 &lt;/li&gt;
+    &lt;li&gt; List 4 &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+
+
+
+
+    &lt;ol&gt;
+    &lt;li&gt; List 1 &lt;/li&gt;
+    &lt;li&gt; List 2 &lt;/li&gt;
+    &lt;/ol&gt;
+
+
+    &lt;blockquote cite=“https://link-address.html”&gt;
+    &lt;p&gt;
+        Actual Quote text
+    &lt;/p&gt;
+    &lt;cite&gt;Citation&lt;/cite&gt;
+    &lt;/blockquote&gt;
+
+
+&lt;!— Open in same tab --&gt;
+    &lt;a href=“link”&gt;
+    Link words
+    &lt;/a&gt;
+
+
+&lt;!— Open new tab —&gt;
+    &lt;a href=“link” target=“_blank”&gt;
+    &lt;/a&gt;
+
+
+    &lt;a href= “#contact-us”&gt;Need to contact us&lt;/a&gt;
+    &lt;a href= “link#contact-us”&gt;Need to contact us?&lt;/a&gt;
+    &lt;h2 id=“contact-us”&gt;Contact Us&lt;/h2&gt;
+
+
+
+
+Formatting/Tone
+
+
+Elements should be selected for meaning not default styling
+
+
+    &lt;strong&gt;&lt;/strong&gt; should be used to show importance not to be used for bold - use styles for that
+
+
+    &lt;em&gt;&lt;/em&gt; Should bemused for emphasis not for italics
+
+
+    &lt;mark&gt;&lt;/mark&gt; should be used for highlight for notation, not just for highlighting colours etc
+
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt; Fish &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+Hello World
+    &lt;/body&gt;
+    &lt;/html&gt;
+
+
+    &lt;img src=“link” alt=“Alternative Text”&gt;
+
+
+src is the path to the source
+alt is the alternative text for screen readers / fails to load / not mandatory but very important
+
+
+    &lt;figure&gt;
+    &lt;img
+            src=“link”
+            alt=“alt text”
+    &gt;
+    &lt;figcaption&gt; Caption text &lt;/figcaption&gt;
+    &lt;/figure&gt;
+
+
+    &lt;video controls width=“250”&gt;
+    &lt;source src=“/path/to/video.webm” type=“video/webm”&gt;
+
+
+    &lt;source src=“path/to/video.mp4” type=“video/mp4”&gt;
+
+
+    Sorry, your browser doesn’t support embedded videos.
+    &lt;/video&gt;
+
+
+    &lt;audio controls&gt;
+    &lt;source src=“link” type=“audio/mpeg”&gt;
+    &lt;source src=“link’ type=“audio/agg”&gt;
+    Your browser does not support the &lt;code&gt;audio&lt;/audio&gt; element.
+    &lt;/audio&gt;
+
+
+    &lt;table&gt;
+    &lt;thead&gt;.  — wraps header rows
+    &lt;tr&gt;   - wraps a single table row
+    &lt;th&gt;Forename&lt;/th&gt;.  - a single header cell
+    &lt;th&gt;Surname&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;   — wraps body rows
+    &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;.   — a single body cell
+    &lt;td&gt;Bloggs&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;.   — wraps the footer rows
+    &lt;/tfoot&gt;
+    &lt;/table&gt;
+
+
+
+
+Colspan
+    &lt;th colspan=“2”&gt; 2 Column Heading&lt;/th&gt;
+
+
+
+
+    &lt;form action=“where form is submitted link” method=“GET or POST”&gt;
+
+
+    &lt;/form&gt;
+
+
+GET  submits values to URL (do not use for sensitive data)
+POST submits data via the request body
+
+
+Form Controls:
+&lt;input type=“text’ name=“username”&gt;
+
+
+name is the key for the entered value
+type is the type of form control to render type = text, checkbox, email, file, radio
+
+
+&lt;textarea placeholder=“Enter a bio” name=“bio”&gt;&lt;/textarea&gt;
+&lt;select name=“colour”&gt;
+    &lt;option&gt; Option one&lt;/option&gt;
+    &lt;option&lt;/option&gt;
+    &lt;/selec
+
+
+
+
+
+
+
+
+    Checkboxes
+    Can add [] to checkboxes to show multiple being submitted e.g name=“genre[]”
+
+
+    Every form control should have a &lt;label/&gt;
+    &lt;label for=“username”&gt;Username:&lt;/label&gt;
+    &lt;input id=“username’ type=“text” name=“username”&gt;
+
+
+    Buttons
+    Should have a type e- submit - sends the form, type of button will not submit - used for custom interactions
+    &lt;button/&gt;
+
+
+    &lt;button type=“submit”&gt;Log In&lt;/button&gt;\
+
+
+
+
+
+
+    Validation
+
+
+    HTML5 introduces some basic native form validation
+    Specialist input types such as email include auto applied validation rules
+    Adding required takes mandatory
+
+
+    Examples:
+
+
+    pattern=“[A-Za-z] {3}”
+    minlength=“6”
+    maxlength=“20”
+
+
+    Can also write CSS rules
+
+
+    Layout Elements
+
+
+    &lt;article/&gt; wraps around independent content
+    &lt;header/&gt; wraps a header section, h1- h6, author, log etc
+    &lt;nav/&gt; wraps a section which defines navigation
+    &lt;section/&gt; wraps a thematic group of content in a page
+    &lt;footer/&gt; wraps footer info at the bottom of page - opposite of heading
+    &lt;div/&gt; - block level wrapper, used for grouping or styling
+    &lt;span/&gt; used inline for individual words etc
+    &lt;aside/&gt; used to show other info ?
+
+
+    Common attributes
+    id - a unique identifier
+    class = space separated list of class labels - for css
+    tab index - set as an integer indicting the order in which elements can be navigated tab index that are minus will e skipped
+    data-*    any custom attribute which have to meaning to html but can be use din javascript
+    spellcheck - indicated if browser needs to spellcheck
+    title - produces a tooltip which shows on hover (don’t over use)
+
+
+    code style
+    be neat
+    be mindful of those reading it
+    Use lower case tags and attribute
+    generally one element per line
+    when nesting indent the child by two or 4 spaces
+    All blocks of whitespace regardless of size are collapsed to a single space (with exception to &lt;pre&gt;)
+
+
+Keep Code Tidy
+
+
+</p>
+<p>
+    Cascading StyleSheets
+
+
+CSS allows us to alter appearance of HTML: Like colour, size, visibility and position
+
+
+CSS code has:
+Selectors - syntax defining the element to large
+Properties - the style to effect
+Values
+
+
+
+
+Selectors:
+#page-title /* Element with and id of page-title */
+
+
+.heading /* All events with a class heading */
+
+
+h2 /* All h2 elements */
+
+
+h2#page-title  /* an h2 element with an id of page-title
+
+
+h2.heading /* All h2 elements with a class of heading */
+
+
+Using a comma operator , We can target multiple selectors
+#page-title, .heading, h2
+
+
+Using a space separator we can target all spans within .heading
+.heading span
+
+
+
+
+Different Selectors have different specificity
+Element has score of 1 e.g h1
+Class has score of 10 e.g .heading
+ID has score of 100 e.g #page-titile
+
+
+h1.heading = 1 + 10 = 11
+
+
+Example
+
+
+p.body-text {
+color: blue;
+}
+
+
+.body-text {
+color: red;
+}
+
+
+&lt;!— Text below will be blue as 11&gt;10 —&gt;
+&lt;p class=“body-text”&gt;This is some text…&lt;/p&gt;
+
+
+
+
+Including CSS
+CSS can be added to the &lt;head/&gt; in a &lt;style /&gt; element
+Or they can be linked externaly using a &lt;link/&gt; element
+
+
+E.g
+&lt;style&gt;
+.head-style {
+    color: red;
+}
+&lt;/style&gt;
+
+
+Or
+
+
+&lt;link href=“example.css” rel=“stylesheet”&gt;
+
+
+Third way : is putting style in the tag &lt;section style=‘color:red’&gt; but isn’t used often
+
+
+
+
+Typography:
+choose the right tag for the job
+don’t style everything the same
+fonts not always available, always provide a fallback
+Colours may be names or hexadecimal (#FF0000)
+Full Example:
+.my-class {
+color: red;
+font-family: “Arial”, sans-serif;
+font-size: 2rem;
+font-weight: bold;
+font-weight: bold;
+letter-spacing: 0.1rem;
+line-height: 2.2rem;
+text-decoration: underline;
+}
+https://www.sitepoint.com/understanding-and-using-rem-units-in-css/ - Sizing Link
+
+
+
+
+Box Model
+
+
+Margin Margin
+Border Border
+Padding Padding
+Content
+Padding Padding
+Border Border
+Margin Margin
+
+
+ALWAYS consider using this rule as the first thing in your CSS:
+`*, *:after, *:before { box-sizing: border-box }`
+This will make things "sane".
+`*` stands for "everything" (every html element on the page)
+
+
+More here: https://css-tricks.com/box-sizing/
+
+
+Padding rules:
+padding: 4px; all sides 4px
+padding: 5px 10px; top and bottom 5px, left and right 10px
+padding: 5px 6px 7px 8px top 5px, right 6px bottom 7px left 8px
+Padding-left: 5px; set just the left side padding
+
+
+Border rules:
+border: 2px solid red;
+border-right: 1px dashed blue;
+border-left: none;
+
+
+margin: auto;      will set margins so content is centered
+
+
+https://tailwindcss.com/ - new css framework (becoming more popular)
+
+
+Collapsing margins
+CSS has a quirk where margins overlap each other
+You would expect a 5px margin on each element to result in a 10px gap but its only 5px
+If the margins are the same it will merge. If they are different they will add. e.g 10 + 10 = 10 , 10+ 15 = 25
+
+
+
+
+Containers
+Containers are most often centered on the page
+Most pages will have a container which contains elements to a fixed width
+
+
+Backgrounds
+Fills an element from content to padding
+Can be a combination of image and colour
+Images can be repeated or stretches to fit
+Colours may be names or hexadecimal
+The element won’t stretch to fit, so may need width / height specified
+Can be a gradient
+
+
+Properties:
+background-image: url(ling);
+background-size: cover;
+width: 250px;
+height: 250px;
+background-colour: green;
+background-image: linear-gradient(black, white);
+https://css-tricks.com/almanac/properties/b/background-size/ - background size tricks
+
+
+Display
+values:
+none - element is hidden
+block - expands to full with, with line breaks before and after
+inline - renders in line with other in line elements, ignores width padding and margin
+inline-block - same as inline but honours width, padding, and margin
+Also:
+flex - Flexbox
+grid - Grid
+
+
+“””Already used in Bootstrap (so you don't need to include it yourself), but very often used is Normalize.css (also an alternative: Reset.CSS): http://nicolasgallagher.com/about-normalize-css/
+
+
+These are small stylesheets to help you "reset" the default values to desirable results _across_ all browsers (cross-browser compatibility is always a problem for web devs).”””
+
+
+All HTML have a default display value, CSS overrides this
+p, dic, h1, section, form - display:block
+span, strong, a      - display:inline
+
+
+
+
+Sizing Elements
+absolute - fixed sizes
+relative - variable based on the parent values
+Absolute:
+Less favourable as they don’t scale to screen size
+Can be useful for print media (cm, mm, in)
+1px = 1/96 of an inch
+1pt = 1/72 of an inch
+
+
+Relative
+% = is relative to the parents value for the same property
+em = is relative to the current elements font size (is the width of the ‘m’ character)
+rem = is relative to the root elements font size (&lt;html&gt;)
+vh/vw are relative to the size of the viewport (screen)
+
+
+HTML 62.5% thing? Have a look online
+
+
+Responsive CSS
+Responsive sites are those that reform themselves to work well on devices of multiple sizes
+This may include changing layout (e.g  stacking column vertically on mobile)
+Some element may also be removed altogether on small screens
+When developing for different devices, we need to consider the usability of solutions
+For example button sizes should be lager on touch screen devices
+When implementing responsive sites, we tend to develop “mobile first”
+Linear approach - elements will be top to bottom
+Elements which don’t need to be full width on larger displays can be adapted into columns
+Grids lend themselves to responsive layouts
+Requirements for Responsive CSS
+We must define a viewport in the head
+Media queries allow us to target different screens and mediums
+We can also target print media as well as different screen sizes
+There are “standard” media queries which allow us to target specific screen sizes and devices
+Example:
+
+
+&lt;style&gt;
+@media screens nd (min-width: 1024px) {
+    div.column {
+        width: 33%
+        display: inline-block;
+    }
+}
+&lt;/style&gt;
+&lt;meta name=“viewport” content=“width=device-width, initial-scale=1.0”&gt;
+
+
+Pseudo Classes & Elements
+CSS allows more complex selectors (e.g. hover state and links which have already been visited)
+We can inject elements
+e.g
+
+
+a {
+color: black;
+}
+
+
+a:hover {
+color: red;
+}
+
+
+a::after { ties additional content
+content: “ “;
+etc etc
+
+
+}
+
+
+Can use transition for animation
+e.g.
+
+
+a.transition {
+transition: .5s ease-in;
+}
+
+
+Instead of pseudo class we can also define CSS animations which are permanently running when rendered
+These can be also  be delayed, repeated, and have their timings customised
+Can be defined using the @keyframes syntax
+E.g.
+
+
+@keyframes glow-from-to {
+from {color: red}
+to { color: blue; }
+}
+
+
+a.glow-from-to {
+animation-name: glow-from-to;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+
+Advanced Selectors:
+Universal selector (*) - Selects all elements
+Child selector (&gt;) - selects elements directly inside an element
+Adjacent selector (+) - selects the next element after an element
+https://www.w3schools.com/cssref/css_selectors.asp - extra selector stuff
+
+
+CSS Transformations
+It’s possible to transform certain elements using various functions
+Available functions:
+rotate()
+translate()
+skew()
+CSS Filters
+Possible to manipulate an element using CSS
+blur()
+brightness()
+contrast()
+hue-rotate()
+
+
+Inspecting CSS in the Browser
+CSS can be viewed an altered within the browser
+These changes won’t be saved
+But some styles. Might override yours
+Useful for debugging and tweaking
+
+
+Useful links:
+
+
+coolors.co
+color-hex.com
+</p>
+</body>
+</html>
